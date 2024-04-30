@@ -25,5 +25,5 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{secrets.DOCKERHUB_USERNAME}}/vueapp:${{github:sha}}
+          tags: ${{secrets.DOCKERHUB_USERNAME}}/vueapp:${{github.sha}}
           plateforms: linux/amd64
