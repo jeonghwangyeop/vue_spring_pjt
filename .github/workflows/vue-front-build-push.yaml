@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./
-          file: ./dockerfile
+          file: ./Dockerfile
           push: true
           tags: ${{secrets.DOCKERHUB_USERNAME}}/vueapp:${{github.sha}}
           plateforms: linux/amd64
