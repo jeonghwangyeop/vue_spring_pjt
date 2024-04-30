@@ -22,8 +22,8 @@ jobs:
       - name: Push Image
         uses: docker/build-push-action@v2
         with:
-          context: .
-          file: ./Dockerfile
+          context: ./
+          file: ../Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/vueapp:${{ github.sha }}
           platforms: linux/amd64
